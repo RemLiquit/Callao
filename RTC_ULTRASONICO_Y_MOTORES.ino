@@ -44,14 +44,13 @@ void setup()
 
 void loop() 
 {
-  digitalWrite(trigger,LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigger,HIGH);
+  digitalWrite(trigger, LOW);   
+  delayMicroseconds(5);
+  digitalWrite(trigger, HIGH);   
   delayMicroseconds(10);
-  digitalWrite(trigger,LOW);
-
+  digitalWrite(trigger, LOW);   
   tiempo_de_espera=pulseIn(echo,HIGH);
-  distancia=(tiempo_de_espera/2)/29.15;
+  distancia = tiempo/58;
 
   Serial.print(distancia);
   Serial.println("cm");
