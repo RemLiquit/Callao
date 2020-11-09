@@ -8,7 +8,8 @@ int ENB=11;
 //entradas de ultrasonico
 int trigger=5;
 int echo=3;
-float tiempo_de_espera,distancia;
+long tiempo_de_espera;
+long distancia;
 //rtc
 #include <Wire.h>
 #include <RTClib.h>
@@ -44,6 +45,9 @@ void setup()
 
 void loop() 
 {
+  long tiempo_de_espera=0;
+  long distancia=0;
+
   digitalWrite(trigger, LOW);   
   delayMicroseconds(5);
   digitalWrite(trigger, HIGH);   
